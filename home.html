@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="keywords" content="Uber&amp;apos;s aerial taxi play">
     <meta name="description" content="">
-    <title>home</title>
+    <title>PMY Trans | Home</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
 <link rel="stylesheet" href="home.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
@@ -275,9 +275,45 @@ Republic of Congo</p>
       </div>
     </section>
     <style class="u-overlap-style">.u-overlap:not(.u-sticky-scroll) .u-header {
-background-color: #ffffff !important
-}</style>
+background-color: #ffffff !important;
 
+}
+.translate_holder{
+padding: 20px;
+border-radius: 5px;
+position: fixed;
+z-index: 100;
+right: 10px;
+bottom: 10px;
+color: #ffffff;
+background:#FFA35A;
+}
+#translator_container{
+display: none;
+}
+#language_arrow{
+cursor: pointer;
+}
+#arrow_icon{
+display: inline-block;
+font-size: 20px;
+}
+.plus_sign{
+transform: rotate(0deg);
+}
+
+.x_sign{
+transform: rotate(45deg) !important;
+}
+
+</style>
+
+<div class="translate_holder">
+<span id="language_arrow" style="font-size: 10px;"> <span id="arrow_icon" class="plus_sign">+ </span> LANGUAGE</span>
+<div id="translator_container">
+<div id="google_translate_element"></div>
+</div>
+</div>
 
     <footer class="u-clearfix u-footer u-image u-shading u-footer" id="sec-a077" data-image-width="7717" data-image-height="3867"><div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
@@ -333,6 +369,23 @@ background-color: #ffffff !important
         <p class="u-text u-text-default u-text-grey-50 u-text-1"><b>All Rights Reserved. PMY Trans 2022</b>
         </p>
       </div></footer>
-  
+      <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+          <script type="text/javascript">
+          $(document ).ready(function() {
+          $("#language_arrow").click(function() {
+            $("#translator_container").toggle();
+            $('#arrow_icon').toggleClass("x_sign");
+             e.preventDefault();
+    });
+
+      });
+          </script>
+          <script type="text/javascript">
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+          }
+          </script>
+          <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body></html>
